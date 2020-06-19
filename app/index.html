@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#19A2B8">
+    <link rel="icon" href="./icons/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="userlisting"> 
+  
+
+
+  
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="main.js"></script>
+   <style type="text/css">
+     .hide{
+      display: none;
+     }
+     body{
+      font-family: 'Lato', sans-serif;
+        padding: 0 1rem;
+        text-align: center;
+         background-image: linear-gradient(to right, rgba(51,204,204,0), rgba(51,204,204,1));
+       
+      }
+      .button {
+        padding: 0.2rem 1rem;
+        font-size: 1rem;
+        background: #17a2b8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+   </style>
+    <meta charset="utf-8">
+    <title>Contacts pwa</title>
+  </head>
+  <body class="">
+     <main class="p-2">
+      <div id="first" class="container p-5">
+       <a class="btn-lg btn-info mg-2" href="register.html">Register</a> <br><br>
+       <button class="button" id="view" onclick="view()">View Users</button>
+        </div>
+    <div id="myData" class="hide table-responsive">
+      <table id="mytable" class="table table-striped">
+        <tr>
+          <th>First Name</th>
+          <th>Category</th>
+        </tr>
+      </table>
+      <button onclick="index()">Back</button>
+    </div>
+     
+    </main>
+   
+  </body>
+  <script>
+
+      
+
+        // Register SW if supported
+        if ( 'serviceWorker' in navigator ) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/pwa_contacts/app/sw.js');
+          });
+        }
+
+      
+
+    </script>
+   
+</html>

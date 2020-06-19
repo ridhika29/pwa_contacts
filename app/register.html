@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<style type="text/css">
+	 body{
+      font-family: 'Lato', sans-serif;
+        padding: 0 1rem;
+        text-align: center;
+         background-image: linear-gradient(to right, rgba(51,204,204,0), rgba(51,204,204,1));
+       
+      }
+      .hide{
+      display: none;
+     }
+      </style>
+</head>
+<body>
+	<div class="container p-5">
+<label>Name : </label>
+<input type="text" class="input-lg" name="name" id="name">
+<br>
+<label>Category : </label>
+<input type="text" class="input-lg" name="category" id="category">
+<br><br>
+<button id="register" class="btn-info" onclick="register()">Register</button>
+<a href="index.html" class="btn-info">Back</a>
+<h5 id="message" class="hide" ></h5>
+</div>
+</body>
+</html>
